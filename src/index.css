@@ -1,13 +1,140 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: #fdfdfd;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ text-align: left; 
+ box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title-page{
+  padding: 2vw;
+}
+
+h1 {
+  font-family: 'Anton';
+  font-size: 12vw;
+  color: rgb(215, 155, 215);
+  margin: 0;
+  margin-top: -3vw;
+  margin-bottom: -9vw;
+  padding: 0;
+  text-align: left;
+}
+
+.four-titles{
+  position: relative;
+  font-family: 'Anton';
+  font-size: 6vw;
+  width: 60%;
+  margin-bottom: -8vw;
+  padding: 0;
+  color: rgb(235, 185, 235);
+  cursor: pointer;
+  text-align: left;
+  transition-duration: 0.5s;
+}
+
+.four-titles:hover{
+  color: rgb(185, 233, 236) !important;
+}
+
+.rotated{
+  opacity: 0;
+  transform: rotateX(90deg);
+  transition-duration: 0.5s;
+}
+
+.hidden{
+  display: none;
+}
+
+.content{
+  position: absolute;
+  width: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6vw;
+  font-weight: 300;
+  line-height: 1.7vw;
+  transition-duration: 0.5s;
+  margin-top: 1.2vw;
+}
+
+.box-container{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8vw;
+}
+
+button{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.4vw;
+  letter-spacing: 2px;
+  color: rgb(215, 155, 215);
+  border: solid 2px rgb(215, 155, 215);
+  background-color: #fdfdfd;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  width: 32%;
+  height: 3.5vw;
+  transition-duration: 0.3s;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(215, 155, 215);
+}
+
+button:hover{
+  background-color: rgb(185, 233, 236);
+  color: #fdfdfd;
+}
+
+img{
+  width: 19%;
+  position: absolute;
+  left: 48vw;
+  top: 6.5vw;
+}
+
+@media only screen and (max-width: 768px) {
+  h1{
+    font-size: 26vw;
+    line-height: 26vw;
+    margin-top: 10vw;
+    color: rgb(213, 158, 213);
+  }
+  .title-page{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3vw;
+  }
+  .four-titles{
+     width: 100%;
+     font-size: 11.3vw;
+     margin-bottom: -13vw;
+  }
+  .content{
+    margin-top: -2vw;
+    width: 95%;
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+  }
+  img{
+    z-index: -1;
+    left: 48vw;
+    top: 0vw;
+    width: 32%;
+  }
+  .box-container{
+    margin-top: 15vw;
+    width: 100%;
+  }
+  button{
+    font-size: 3.5vw;
+    height: 7vw;
+  }
 }
