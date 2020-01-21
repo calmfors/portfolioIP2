@@ -16,8 +16,8 @@ h1 {
   font-size: calc(90px + 6vw);
   color: rgb(215, 155, 215);
   margin: 0;
-  margin-top: calc(-23px - 1.5vw);
-  margin-bottom: calc(-23px - 1.5vw);
+  margin-top: calc(-23px - 1vw);
+  margin-bottom: calc(-21px - 1.4vw);
   padding: 0;
   text-align: left;
 }
@@ -36,17 +36,13 @@ h1 {
   color: rgb(235, 185, 235);
   cursor: pointer;
   text-align: left;
-  transition-duration: 0.5s;
-}
-
-.four-titles:hover{
-  color: rgb(185, 233, 236) !important;
+  transition-duration: 0.8s;
 }
 
 .rotated{
   opacity: 0;
   transform: rotateX(90deg);
-  transition-duration: 0.5s;
+  transition-duration: 0.8s;
 }
 
 .hidden{
@@ -55,6 +51,7 @@ h1 {
   transition-duration: 0.25s;
   z-index: -1;
 }
+
 
 .content{
   position: relative;
@@ -71,24 +68,31 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   position: absolute;
   left: calc(15px + 1vw);
-  top: calc(108px + 7.25vw);
+  top: calc(108px + 7.2vw);
   width: calc(367px + 24.5vw);
-  height: calc(191px + 12.75vw);
+  height: calc(198px + 13.2vw);
   background-color: white;
-  opacity: 0.95;
   box-shadow: 0 0 10px rgb(194, 194, 194);
   transition-duration: 0.25s;
+  opacity: 0;
+  animation: opac 0.4s forwards;
+}
+@keyframes opac {
+  100% {
+    opacity: 0.95;
+  }
 }
 .popup-content{
   line-height: calc(15px + 1vw);
   font-size: calc(10px + 0.65vw);
   padding-left: calc(15px + 1vw);
   padding-right: calc(15px + 1vw);
-  height: calc(165px + 11vw);
+  height: calc(180px + 12vw);
   overflow: auto;
   overflow-y: overlay;
   margin-right: calc(3.75px + 0.5vw);
-    -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  white-space: pre-line;
 }
 
 .popup-content::-webkit-scrollbar { 
@@ -100,11 +104,35 @@ h1 {
   background-color: rgb(185, 233, 236);
   border-radius: calc(5.5px + 0.35vw);
 }
-.popup-content img{
+.wip{
   width: 30%;
   margin-top: calc(30px + 2vw);
   margin-left: calc(60px + 4vw);
   transform: rotate(-12deg);
+}
+.dl-pdf{
+  width: calc(37px + 2.5vw);
+  height:calc(37px + 2.5vw);
+  background-color: rgb(235, 185, 235);
+  border-radius: calc(18.5px + 1.25vw);
+  position: absolute;
+  left:calc(300px + 20vw);
+  top:calc(22px + 1.5vw);
+  text-align: center;
+  opacity: 50%;
+  transition-duration: 0.25s;
+}
+.dl-pdf img{
+  margin-left:calc(-0.75px - 0.1vw);
+  margin-top:calc(2.25px + 0.15vw);
+ width:63%;
+}
+.dl-pdf:hover{
+  width: calc(45px + 3vw);
+  height:calc(45px + 3vw);
+  border-radius: calc(22.5px + 1.5vw);
+  transform: translate(-10%,-10%);
+  opacity: 100%;
 }
 .popup-content span{
   display: block;
@@ -118,9 +146,8 @@ h1 {
  color:rgb(185, 233, 236);
 }
 .x{
-  height: calc(15px + 1vw);
-  padding-top: calc(4px + 0.25vw);
-  padding-right: calc(4px + 0.25vw);
+  height: calc(7.5px + 0.5vw);
+  padding: calc(4px + 0.25vw);
   margin: 0;
   font-weight: 700;
   font-size: calc(7.5px + 0.5vw);
@@ -129,6 +156,7 @@ h1 {
   cursor: pointer;
   overflow: hidden;
 }
+
 .box-container{
   width: calc(367px + 24.5vw);
   display: flex;
@@ -158,8 +186,9 @@ a{
 }
 a img{
   position: relative;
+  margin-left: 0.4vw;
   bottom:-0.2vw;
-  width: 18%;
+  width: 17%;
 }
 
 button:hover{
@@ -172,7 +201,7 @@ button:hover a{
 }
 
 .erik{
-  width: calc(142px + 9.5vw);
+  width: calc(145px + 9.9vw);
   position: absolute;
   left: calc(367px + 24.5vw);
   top: calc(49px + 3.25vw);
@@ -186,7 +215,7 @@ label{
   margin-right: calc(7.5px + 0.5vw);
   margin-bottom: calc(5px + 1vw);
   width: calc(60px + 4vw);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: calc(10.5px + 0.7vw);
   padding:0;
   text-align: right;
@@ -263,7 +292,6 @@ input[type=submit]:hover{
     animation: tap infinite 1s;
     transform-origin: bottom;
     filter: drop-shadow(0 0 1vw rgb(194, 194, 194));
-
   }
   @keyframes tap {
     100% {transform: translate(3vw, 3vw);}
@@ -334,10 +362,30 @@ input[type=submit]:hover{
   }
 
   .x{
-    padding-top: 2vw;
-    padding-right: 2vw;
+    padding: 1vw;
     height: 4vw;
     font-weight: 700;
     font-size: 3vw;
+  }
+  .dl-pdf{
+  width: 16vw;
+  height:16vw;
+  border-radius: 8vw;
+  left:74vw;
+  top:8vw;
+  opacity: 85%;
+  }
+.dl-pdf img{
+  margin-left:-0.5vw;
+  margin-top:1vw;
+  width: 63%;
+}
+ .dl-pdf:hover{
+  width: 16vw;
+  height:16vw;
+  border-radius: 8vw;
+    opacity: 85%;
+
+   transform: translate(0);
   }
 }

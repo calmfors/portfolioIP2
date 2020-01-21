@@ -22,52 +22,84 @@ const content = [
   }
 ];
 
-// const cv_obj = [{
-//   year_start: 2015, year_end: 2017, company: 'Egmont', role: 'Editor / Designer', string: `Hus & Hem Trädgård(6 nr / år), Hälsa
-//     (12 nr / år), Hus & Hem(15 nr / år), Icakurien(50 nr / år) .Fotografering av produkter och
-// mindre bylinebilder i studio.`}]
-//cv_obj.map(obj => )
-const cv = `ARBETSLIVSERFARENHET 2015–2017(Egmont) Redigerare / formgivare Hus & Hem Trädgård(6 nr / år), Hälsa (12 nr / år), Hus & Hem(15 nr / år), Icakurien(50 nr / år).Fotografering av produkter ochmindre bylinebilder i studio.`
+const cv_obj = [{
+  year_start: 2015,
+  year_end: 2017,
+  company: 'Egmont Publishing',
+  role: 'Designer/Editor',
+  description: 'Worked mostly with layout, also photo manipulation and product and byline photography in studio. Magazines: Hus&Hem Trädgård (6 issues/year), Hälsa (12 issues/year), Hus&Hem (15 issues/year), Icakurien (50 issues/year).'
+},
+{
+  year_start: 2007,
+  year_end: 2015,
+  company: 'Forma Publishing',
+  role: 'Designer/Editor',
+  description: 'Worked mostly with layout, also photo manipulation and product and byline photography in studio. Responsible for layout templates, advert placement and proofing before print. Magazines: Icakurien (52 issues/year).'
+},
+{
+  year_start: 2001,
+  year_end: 2006,
+  company: 'SVT Text',
+  role: 'Movie Critic',
+  description: 'Part time job "on the side". Wrote around 200 reviews.'
+},
+{
+  year_start: 2005,
+  year_end: 2006,
+  company: 'Expressen',
+  role: 'Copy Editor/Layout',
+  description: 'Temporary post for 11 months, mostly on entertainment section. Layout manager for the weekly magazine Expressen Fredag '
+},
+{
+  year_start: 2004,
+  year_end: 2005,
+  company: 'Svenska Dagbladet',
+  role: 'Copy Editor/Layout',
+  description: 'Temporary post for 11 months, mostly on sport section.'
+},
+{
+  year_start: 2002,
+  year_end: 2005,
+  company: 'Stockholm university student union',
+  role: 'Layout and Photo Manager',
+  description: 'Part time (50%). Magazine: Gaudeamus (5 issues/year).'
+},
+{
+  year_start: 2002,
+  year_end: 2003,
+  company: 'Dagens Nyheter',
+  role: 'Copy Editor/Layout',
+  description: 'Temporary post for 11 months, in all sections but mostly sport.'
+}]
 
-//             2007–2015(Forma) Redigerare / teknisk redaktör av veckotidningen Icakuriren.Ansvar
-// för mallar, annonsplaceringar mm samt fotograf av bla testade produkter.
-//             2001–2006 Filmrecensent för SVT Text.
-//             2005–2006 Heltidsvikariat som dagredigerare på Expressen, november 2005 till augusti 2006.
-// Främst på kulturavdelningen.Layoutansvarig för Expressens veckobilaga Fredag maj till
-// augusti 2006.
-// 2004–2005 Heltidsvikariat som redigerare på Svenska Dagbladet, juni 2004 till juni 2005.
-// Främst sportavdelningen men även inhopp på kultur - och nyhetsavdelningen.
-//             2002–2005 Halvtidstjänst som formgivnings - och fotoansvarig för Stockholms studentkårs
-// tidning, Gaudeamus.Totalt 21 nummer.
-//             2004 Dataregistrerare för Manpower på Skatteverket, maj.
-//             2002–2003 Heltidsvikariat som redigerare på Dagens Nyheter, juni 2002 till augusti 2003.
-// I början på kulturavdelningen men senare framförallt på sport - men även nyhetsavdelningen.
-//             2002 Korrekturläsare / redigerare för Universals skivkatalog(intern).
-//             2000–2002 Formgivnings - och fotoansvarig för humanistiska föreningens tidning, Känguru.
-//             1999–2001 Filmrecensent och skribent för cinema.se och papperstidningen cinema.
-//             1998–1999 Bildansvarig för Borlänge studentkårs tidning, Kårsetten.Ansvarig för Borlänge
-// studentkårs filmvisning.
-//   UTBILDNINGAR
-// 2013–2014 Yogalärarutbildning, ashtanga, helg, 200 h, It’s yoga Stockholm.
-//             2000–01 Filmvetenskaplig grundkurs 40 p(35), Stockholms universitet.
-//             1999–2000 Forsbergs skola – copywriter dagskola, heltid, inkl.en vecka praktik under våren
-// 2000 som AD på reklambyrån Harry.
-//             1999 Åtta veckor praktik under sommaren på filmtidningen cinema – text och layoutarbeten
-// samt viss bildbehandling.
-//             1997–99 Grafisk teknologi 120 p(80), högskolan Dalarna, Borlänge.
-//             1996–97 Militärtjänst som väderbiträde 11 månader, F - 17 Ronneby.
-//             1993–96 Naturvetenskapliga programmet, Västerviks gymnasium.
-//   ÖVRIGT
-// • Mycket goda kunskaper i Indesign, Photoshop, Illustrator på PC och Mac.
-// • Goda kunskaper i Officepaketet.
-// • Spridda större och mindre grafiska projekt från och med 1994.
-// • Språkkunskaper: engelska, spanska(lite), tyska(lite).
-// • Innehar B - körkort.
-//   REFERENSER
-// Lämnas på begäran.
-//   CV
-// Erik Calmfors, Marmorgatan 2, 11867 Stockholm, 070 - 7202168, 1977 - 03 - 10)
-
+const edu_obj = [{
+  year_start: 2013,
+  year_end: 2014,
+  school: 'It\'s Yoga',
+  education: 'Ashtanga Yoga Teacher',
+  description: 'Weekend school, two terms.'
+},
+{
+  year_start: 2000,
+  year_end: 2001,
+  school: 'Stockholm university',
+  education: 'Cinema Studies',
+  description: 'Full time, two terms.'
+},
+{
+  year_start: 1999,
+  year_end: 2000,
+  school: 'Forsbergs skola',
+  education: 'Copywriter',
+  description: 'Full time, two terms.'
+},
+{
+  year_start: 1997,
+  year_end: 1999,
+  school: 'Dalarna university',
+  education: 'Graphic Design & Technology',
+  description: 'Full time, four terms.'
+}]
 const API = 'https://www.strava.com/api/v3/athletes/32364324/stats?page=1&per_page=30'
 const REFRESH = 'https://www.strava.com/api/v3/oauth/token?'
 let token = localStorage.getItem('token')
@@ -177,11 +209,17 @@ class App extends Component {
   render() {
     const { isTitleRotated, isContentRotated } = this.state;
     if (!this.state.isClicked && !timing) this.checkClick()
+    let cvcontent = [<span>EMPLOYMENT</span>]
+    let educontent = [<span>EDUCATION</span>]
+    cv_obj.map((cv) => {
+      return cvcontent.push(`${cv.year_start}–${cv.year_end} ${cv.role} at ${cv.company}\n`)
+    })
+    edu_obj.map((edu) => {
+      return educontent.push(`${edu.year_start}–${edu.year_end} ${edu.education} at ${edu.school}\n`)
+    })
     return (
-      <div className='title-page'>
-        <h1>
-          Erik Calmfors
-        </h1>
+      <div className='title-page' >
+        <h1>Erik Calmfors</h1>
         {content.map((item, i) =>
           < Heading
             data={i}
@@ -191,7 +229,7 @@ class App extends Component {
             classNameContent={isContentRotated === i + 1 ? 'content' : 'content rotated'}
             clicked={this.rotateHandler.bind(this, i + 1)}
             title={item.title}
-            content={(i === 2) ? item.description + ` Total ${this.state.runningDistance} km this year. So far.` : item.description}
+            content={(i === 2) ? item.description + ` Total ${this.state.runningDistance} km this year, so far.` : item.description}
           />
         )}
         <Buttonbox
@@ -199,35 +237,39 @@ class App extends Component {
           title1='CONTACT'
           title2='CV'
           title3='PORTFOLIO'
-          title4={<a target='_blank' rel='noopener noreferrer' title='Link to my github' href='https://github.com/calmfors'>GITHUB <img src='external-link-symbol.svg' alt=''></img></a>}
+          title4={<a target='_blank' rel='noopener noreferrer' title='Link to my github'
+            href='https://github.com/calmfors'>GITHUB<img src='external-link-symbol.svg' alt='' /></a>}
         />
         <img alt='' src='erik.png' className='erik'></img>
         <img alt='' src='touch.svg' className={this.state.hiddenTap ? 'tap hidden' : 'tap'}></img>
         <Popup
-          className={this.state.hiddenCV ? 'hidden' : 'popup'}
-          clicked={() => this.clickHandler(99)}
-          content={cv} />
-        <Popup
           className={this.state.hiddenContact ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
-          content={
-            <form method='post'
-              onSubmit={this.submitHandler.bind(this)}>
-              Based in Södermalm, Stockholm, Sweden. Please use this form to contact me, or send an email to erikcalmfors@outlook.com<br /><br />
-              <label htmlFor='realname'>Name</label>
-              <input type='text' name='realname' id='realname' value={this.state.realname} onChange={this.handleChange.bind(this)} required /><br />
-              <label htmlFor='email'>Email</label>
-              <input type='email' name='email' id='email' value={this.state.email} onChange={this.handleChange.bind(this)} required /><br />
-              <label htmlFor='Message'>Message</label>
-              <textarea name='Message' rows='3' cols='60' id='Message' value={this.state.Message} onChange={this.handleChange.bind(this)} required></textarea>
-              <input type='submit' name='submit' value={this.state.submit} className='button' />
-            </form>
-          }
+          content=
+          {<form method='post'
+            onSubmit={this.submitHandler.bind(this)}>
+            Based in Södermalm, Stockholm, Sweden. Please use this form to contact me, or send an email to erikcalmfors@outlook.com<br /><br />
+            <label htmlFor='realname'>Name</label>
+            <input type='text' name='realname' value={this.state.realname} onChange={this.handleChange.bind(this)} required /><br />
+            <label htmlFor='email'>Email</label>
+            <input type='email' name='email' value={this.state.email} onChange={this.handleChange.bind(this)} required /><br />
+            <label htmlFor='Message'>Message</label>
+            <textarea name='Message' rows='3' cols='60' value={this.state.Message} onChange={this.handleChange.bind(this)} required />
+            <input className='button' type='submit' name='submit' value={this.state.submit} />
+          </form>}
         />
+
+        <Popup
+          className={this.state.hiddenCV ? 'hidden' : 'popup'}
+          clicked={() => this.clickHandler(99)}
+          content={[<div className='dl-pdf'><a href=''><img src='dl_pdf.svg' alt='' /></a></div>, cvcontent, '\n', educontent, '\n',
+          <a href=''> Click here (or on the icon) to download more detailed pdf-version.</a>, '\n', '\n']}
+        />
+
         <Popup
           className={this.state.hiddenPortfolio ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
-          content={<img src='wip.svg' alt='' />}
+          content={<img src='wip.svg' className='wip' alt='' />}
         />
       </div >
     );
@@ -240,11 +282,17 @@ class App extends Component {
   submitHandler(e) {
     e.preventDefault();
     const { realname, email, Message } = this.state;
-    const params = { realname, email, Message, required: 'realname,email,Message', redirect: '/', subject: 'From portfolio', recipient: 'erik@calmfors.se', missing_fields_redirect: '/' }
+    const params = {
+      realname, email, Message,
+      required: 'realname,email,Message',
+      redirect: '/',
+      subject: 'From portfolio',
+      recipient: 'erik@calmfors.se',
+      missing_fields_redirect: '/'
+    }
     const searchParams = Object.keys(params).map((key) => {
       return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
     }).join('&');
-    console.log(searchParams)
     const cors_anywhere = 'https://cors-anywhere.herokuapp.com'
     fetch(cors_anywhere + '/http://www.calmfors.se/cgi-bin/FormMail.pl', {
       method: 'POST',
@@ -254,7 +302,6 @@ class App extends Component {
       body: searchParams
     })
       .then((response) => {
-        console.info('Response?');
         this.resetForm();
       });
   }
