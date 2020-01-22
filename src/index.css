@@ -52,7 +52,6 @@ h1 {
   z-index: -1;
 }
 
-
 .content{
   position: relative;
   top: calc(-90px - 6.5vw); 
@@ -125,7 +124,7 @@ h1 {
 .dl-pdf img{
   margin-left:calc(-0.75px - 0.1vw);
   margin-top:calc(2.25px + 0.15vw);
- width:63%;
+  width:63%;
 }
 .dl-pdf:hover{
   width: calc(45px + 3vw);
@@ -143,7 +142,7 @@ h1 {
   color:black;
 }
 .popup-content a:hover{
- color:rgb(185, 233, 236);
+  color:rgb(185, 233, 236);
 }
 .x{
   height: calc(7.5px + 0.5vw);
@@ -278,6 +277,7 @@ input[type=submit]:hover{
     margin-top: -2.5vw;
   }
   .content{
+    margin-top: 9vw;
     top: -20vw;
     font-size: 3.4vw;
     line-height: 4.2vw;
@@ -360,7 +360,6 @@ input[type=submit]:hover{
     overflow: auto;
     margin-right: 1vw;
   }
-
   .x{
     padding: 1vw;
     height: 4vw;
@@ -368,24 +367,23 @@ input[type=submit]:hover{
     font-size: 3vw;
   }
   .dl-pdf{
-  width: 16vw;
-  height:16vw;
-  border-radius: 8vw;
-  left:74vw;
-  top:8vw;
-  opacity: 85%;
-  }
-.dl-pdf img{
-  margin-left:-0.5vw;
-  margin-top:1vw;
-  width: 63%;
-}
- .dl-pdf:hover{
-  width: 16vw;
-  height:16vw;
-  border-radius: 8vw;
+    width: 16vw;
+    height:16vw;
+    border-radius: 8vw;
+    left:74vw;
+    top:8vw;
     opacity: 85%;
-
-   transform: translate(0);
+  }
+  .dl-pdf img{
+    margin-left:-0.5vw;
+    margin-top:1vw;
+    width: 63%;
+  }
+  .dl-pdf:hover{
+    width: 16vw;
+    height:16vw;
+    border-radius: 8vw;
+    opacity: 85%;
+    transform: translate(0);
   }
 }

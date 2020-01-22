@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FadeIn from 'react-fade-in';
+
 import Buttonbox from './Box/buttonbox';
 import Heading from './Heading/heading';
 import Popup from './Popup/popup';
@@ -180,22 +182,17 @@ class App extends Component {
 
   checkClick = (e) => {
     if (!e) {
-      console.log('timer is set')
       timing = setTimeout(function () {
         this.setState({ hiddenTap: false })
-      }.bind(this), 7000);
+      }.bind(this), 10000);
     } else {
-      console.log('timer should be cleared')
       clearTimeout(timing);
       this.setState({ hiddenTap: true })
-
     }
   }
 
   rotateHandler = (i, e) => {
-    // this.setState({ hiddenTap: true })
     if (!this.state.isClicked) {
-      console.log('rotate is making it true')
       this.setState({ isClicked: true })
       this.checkClick(true)
     }
@@ -209,29 +206,34 @@ class App extends Component {
   render() {
     const { isTitleRotated, isContentRotated } = this.state;
     if (!this.state.isClicked && !timing) this.checkClick()
-    let cvcontent = [<span>EMPLOYMENT</span>]
-    let educontent = [<span>EDUCATION</span>]
-    cv_obj.map((cv) => {
-      return cvcontent.push(`${cv.year_start}–${cv.year_end} ${cv.role} at ${cv.company}\n`)
+
+    let cvcontent = [<span key={8}> EMPLOYMENT</span>]
+    let educontent = [<span key={9}>EDUCATION</span>]
+    cv_obj.map((cv, i) => {
+      return cvcontent.push(`${cv.year_start}–${cv.year_end} ${cv.role} at ${cv.company}`)
     })
     edu_obj.map((edu) => {
       return educontent.push(`${edu.year_start}–${edu.year_end} ${edu.education} at ${edu.school}\n`)
     })
+
     return (
       <div className='title-page' >
-        <h1>Erik Calmfors</h1>
-        {content.map((item, i) =>
-          < Heading
-            data={i}
-            key={i}
-            color={i === 2 || i === 3 ? 'rgb(255, 215, 255)' : 'rgb(235, 195, 235)'}
-            classNameTitle={isTitleRotated === i + 1 ? 'four-titles rotated' : 'four-titles'}
-            classNameContent={isContentRotated === i + 1 ? 'content' : 'content rotated'}
-            clicked={this.rotateHandler.bind(this, i + 1)}
-            title={item.title}
-            content={(i === 2) ? item.description + ` Total ${this.state.runningDistance} km this year, so far.` : item.description}
-          />
-        )}
+        <FadeIn transitionDuration={800}>
+          <h1>Erik Calmfors</h1>
+          {content.map((item, i) =>
+            < Heading
+              data={i}
+              key={i}
+              color={i === 2 || i === 3 ? 'rgb(255, 215, 255)' : 'rgb(235, 195, 235)'}
+              classNameTitle={isTitleRotated === i + 1 ? 'four-titles rotated' : 'four-titles'}
+              classNameContent={isContentRotated === i + 1 ? 'content' : 'content rotated'}
+              clicked={this.rotateHandler.bind(this, i + 1)}
+              title={item.title}
+              content={(i === 2) ? item.description + ` Total ${this.state.runningDistance} km this year, so far.` : item.description}
+            />
+          )}
+        </FadeIn>
+
         <Buttonbox
           clicked={this.clickHandler.bind(this)}
           title1='CONTACT'
@@ -242,6 +244,7 @@ class App extends Component {
         />
         <img alt='' src='erik.png' className='erik'></img>
         <img alt='' src='touch.svg' className={this.state.hiddenTap ? 'tap hidden' : 'tap'}></img>
+
         <Popup
           className={this.state.hiddenContact ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
@@ -262,8 +265,8 @@ class App extends Component {
         <Popup
           className={this.state.hiddenCV ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
-          content={[<div className='dl-pdf'><a href=''><img src='dl_pdf.svg' alt='' /></a></div>, cvcontent, '\n', educontent, '\n',
-          <a href=''> Click here (or on the icon) to download more detailed pdf-version.</a>, '\n', '\n']}
+          content={[<div key={3} className='dl-pdf'><a key={4} href='cv_ec.pdf'><img key={5} src='dl_pdf.svg' alt='' /></a></div>, cvcontent, '\n', educontent, '\n',
+          <a key={6} href='cv_ec.pdf'> Click here (or on the icon) to download more detailed pdf-version.</a>, '\n', '\n']}
         />
 
         <Popup
@@ -274,6 +277,10 @@ class App extends Component {
       </div >
     );
   };
+
+  // handleCV = (e) => {
+  //   console.log(e.target.dataset.value)
+  // }
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value })
