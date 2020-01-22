@@ -265,7 +265,7 @@ class App extends Component {
         <Popup
           className={this.state.hiddenCV ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
-          content={[<div key={3} className='dl-pdf'><a key={4} href='assets/cv_ec.pdf'><img key={5} src='assets/dl_pdf.svg' alt='' /></a></div>, cvcontent, '\n', educontent, '\n',
+          content={[<div key={3} className='dl-pdf'><a key={4} href='assets/cv_ec.pdf' download><img key={5} src='assets/dl_pdf.svg' alt='' /></a></div>, cvcontent, '\n', educontent, '\n',
           <a key={6} href='assets/cv_ec.pdf'> Click here (or on the icon) to download more detailed pdf-version.</a>, '\n', '\n']}
         />
 
