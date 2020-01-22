@@ -240,10 +240,10 @@ class App extends Component {
           title2='CV'
           title3='PORTFOLIO'
           title4={<a target='_blank' rel='noopener noreferrer' title='Link to my github'
-            href='https://github.com/calmfors'>GITHUB<img src='external-link-symbol.svg' alt='' /></a>}
+            href='https://github.com/calmfors'>GITHUB<img src='assets/external-link-symbol.svg' alt='' /></a>}
         />
-        <img alt='' src='erik.png' className='erik'></img>
-        <img alt='' src='touch.svg' className={this.state.hiddenTap ? 'tap hidden' : 'tap'}></img>
+        <img alt='' src='assets/erik.png' className='erik'></img>
+        <img alt='' src='assets/touch.svg' className={this.state.hiddenTap ? 'tap hidden' : 'tap'}></img>
 
         <Popup
           className={this.state.hiddenContact ? 'hidden' : 'popup'}
@@ -265,14 +265,14 @@ class App extends Component {
         <Popup
           className={this.state.hiddenCV ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
-          content={[<div key={3} className='dl-pdf'><a key={4} href='cv_ec.pdf'><img key={5} src='dl_pdf.svg' alt='' /></a></div>, cvcontent, '\n', educontent, '\n',
-          <a key={6} href='cv_ec.pdf'> Click here (or on the icon) to download more detailed pdf-version.</a>, '\n', '\n']}
+          content={[<div key={3} className='dl-pdf'><a key={4} href='assets/cv_ec.pdf'><img key={5} src='assets/dl_pdf.svg' alt='' /></a></div>, cvcontent, '\n', educontent, '\n',
+          <a key={6} href='assets/cv_ec.pdf'> Click here (or on the icon) to download more detailed pdf-version.</a>, '\n', '\n']}
         />
 
         <Popup
           className={this.state.hiddenPortfolio ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
-          content={<img src='wip.svg' className='wip' alt='' />}
+          content={<img src='assets/wip.svg' className='wip' alt='' />}
         />
       </div >
     );
