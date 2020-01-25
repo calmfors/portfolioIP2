@@ -7,8 +7,8 @@ import Popup from './Popup/popup';
 
 const content = [
   {
-    title: 'Front end developer',
-    description: 'Creative, problem solving and fast learning front end developer in the making. Knows HTML, CSS, Javascript and React.',
+    title: 'Front-end developer',
+    description: 'Creative, problem solving and fast learning front-end developer in the making. Knows HTML, CSS, Javascript and React.',
   },
   {
     title: 'Graphic designer',
@@ -210,7 +210,7 @@ class App extends Component {
     let cvcontent = [<span key={8}> EMPLOYMENT</span>]
     let educontent = [<span key={9}>EDUCATION</span>]
     cv_obj.map((cv, i) => {
-      return cvcontent.push(`${cv.year_start}–${cv.year_end} ${cv.role} at ${cv.company}`)
+      return cvcontent.push(`${cv.year_start}–${cv.year_end} ${cv.role} at ${cv.company}\n`)
     })
     edu_obj.map((edu) => {
       return educontent.push(`${edu.year_start}–${edu.year_end} ${edu.education} at ${edu.school}\n`)

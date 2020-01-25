@@ -1,6 +1,11 @@
+html {
+    min-height: 100%;
+}
 body {
   margin: 0;
-  background-color: #fdfdfd;
+  background-image: linear-gradient(
+     rgb(200, 250, 250), white 70%
+  );
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left; 
@@ -23,7 +28,7 @@ h1 {
 }
 
 .title-box{
-  width: calc(368px + 24.5vw);
+  width: calc(375px + 25vw);
   height: calc(49px + 3.25vw);
   overflow: hidden;
   margin-top: 0;
@@ -385,5 +390,13 @@ input[type=submit]:hover{
     border-radius: 8vw;
     opacity: 85%;
     transform: translate(0);
+  }
+}
+@supports (-ms-ime-align:auto) {
+  h1{
+    letter-spacing: -1.1px;
+  }
+  .four-titles{
+    letter-spacing: -1.1px;
   }
 }
