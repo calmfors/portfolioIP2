@@ -108,10 +108,11 @@ h1 {
   background-color: rgb(185, 233, 236);
   border-radius: calc(5.5px + 0.35vw);
 }
+
 .wip{
   width: 30%;
-  margin-top: calc(30px + 2vw);
-  margin-left: calc(60px + 4vw);
+  margin-top: calc(-15px - 1vw); 
+  margin-left: calc(150px + 10vw);
   transform: rotate(-12deg);
 }
 .dl-pdf{
@@ -136,7 +137,7 @@ h1 {
   height:calc(45px + 3vw);
   border-radius: calc(22.5px + 1.5vw);
   transform: translate(-10%,-10%);
-  opacity: 100%;
+  opacity: 1;
 }
 .popup-content span{
   display: block;
@@ -145,9 +146,10 @@ h1 {
 .popup-content a{
   text-decoration: none;
   color:black;
+  cursor: pointer;
 }
 .popup-content a:hover{
-  color:rgb(185, 233, 236);
+  color:rgb(135, 215, 215);
 }
 .x{
   height: calc(7.5px + 0.5vw);
@@ -190,17 +192,16 @@ a{
 }
 a img{
   position: relative;
-  margin-left: 0.4vw;
   bottom:-0.2vw;
-  width: 17%;
+  width: calc(13px + 0.8vw);
 }
 
 button:hover{
-  background-color: rgb(185, 233, 236);
+  background-color: rgb(185, 235, 235);
   color: #fdfdfd;
 }
 button:hover a{
-  background-color: rgb(185, 233, 236);
+  background-color: rgb(185, 235, 235);
   color: #fdfdfd;
 }
 
@@ -307,9 +308,10 @@ input[type=submit]:hover{
     width: 15vw;
     font-size: 3vw;
   }
-  .popup-content img{
-    margin-top: 14vw;
-    width: 50%;
+  .wip{
+    margin-top: 20vw;
+    margin-left: 40vw;
+    width: 40%;
   }
 
   input{
@@ -377,7 +379,7 @@ input[type=submit]:hover{
     border-radius: 8vw;
     left:74vw;
     top:8vw;
-    opacity: 85%;
+    opacity: 0.85;
   }
   .dl-pdf img{
     margin-left:-0.5vw;
@@ -388,7 +390,7 @@ input[type=submit]:hover{
     width: 16vw;
     height:16vw;
     border-radius: 8vw;
-    opacity: 85%;
+    opacity: 0.85;
     transform: translate(0);
   }
 }

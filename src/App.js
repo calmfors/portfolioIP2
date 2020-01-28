@@ -75,6 +75,13 @@ const cv_obj = [{
 }]
 
 const edu_obj = [{
+  year_start: 2019,
+  year_end: '',
+  school: 'KYH',
+  education: 'Front-end developer',
+  description: 'Full time, two years.'
+},
+{
   year_start: 2013,
   year_end: 2014,
   school: 'It\'s Yoga',
@@ -240,7 +247,7 @@ class App extends Component {
           title2='CV'
           title3='PORTFOLIO'
           title4={<a target='_blank' rel='noopener noreferrer' title='Link to my github'
-            href='https://github.com/calmfors'>GITHUB<img src='assets/external-link-symbol.svg' alt='' /></a>}
+            href='https://github.com/calmfors'>GITHUB <img src='assets/external-link-symbol.svg' alt='' /></a>}
         />
         <img alt='' src='assets/erik.png' className='erik'></img>
         <img alt='' src='assets/touch.svg' className={this.state.hiddenTap ? 'tap hidden' : 'tap'}></img>
@@ -251,7 +258,7 @@ class App extends Component {
           content=
           {<form method='post'
             onSubmit={this.submitHandler.bind(this)}>
-            Based in Södermalm, Stockholm, Sweden. Please use this form to contact me, or send an email to erikcalmfors@outlook.com<br /><br />
+            <span>SAY HELLO</span>Based in Södermalm, Stockholm, Sweden. Please use this form to contact me, or send an email to erikcalmfors@outlook.com<br /><br />
             <label htmlFor='realname'>Name</label>
             <input type='text' name='realname' value={this.state.realname} onChange={this.handleChange.bind(this)} required /><br />
             <label htmlFor='email'>Email</label>
@@ -272,7 +279,13 @@ class App extends Component {
         <Popup
           className={this.state.hiddenPortfolio ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
-          content={<img src='assets/wip.svg' className='wip' alt='' />}
+          content={[<a target='_blank' rel='noopener noreferrer' href='http://calmfors.se/quire/' key={1}>
+            <span key={2}>QUIRE <img src='assets/external-link-symbol.svg' alt='' /></span>
+            Note taking app based on Tiny MCE, Team Project 1 KYH Front-end developer. November 2019.</a>, '\n', '\n',
+          <a target='_blank' rel='noopener noreferrer' href='http://calmfors.se/erikruns/' key={3}>
+            <span key={4}>ERIK RUNS <img src='assets/external-link-symbol.svg' alt='' /></span>
+            Review site for running shoes, Individual Project 1 KYH Front-end developer. October 2019. </a>, '\n',
+          <img key={5} src='assets/wip.svg' className='wip' alt='' />]}
         />
       </div >
     );
