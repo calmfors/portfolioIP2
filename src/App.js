@@ -12,11 +12,11 @@ const content = [
   },
   {
     title: 'Graphic designer',
-    description: 'Worked with newspaper and magazine layout for many years. Amongst the employers: Egmont, Expressen, Svenska Dagbladet and Dagens Nyheter.',
+    description: 'Newspaper and magazine designer (print) for many years. Amongst the employers: Egmont, Expressen, Svenska Dagbladet and Dagens Nyheter.',
   },
   {
     title: 'Ultrarunner',
-    description: 'Running approx 250 km each month, preferable on trails. Fastest marathon 3:23 (Berlin), longest distance 90 km (Ultravasan).',
+    description: 'Best marathon 3:23 (Berlin), longest distance 90 km (Ultravasan). Running approx 250 km per month, preferably on trails.',
   },
   {
     title: 'Father',
@@ -166,7 +166,7 @@ class App extends Component {
       realname: '',
       email: '',
       Message: '',
-      submit: 'Submit'
+      submit: 'Send'
     }
   };
 
@@ -251,14 +251,14 @@ class App extends Component {
         />
         <img alt='' src='assets/erik.png' className='erik'></img>
         <img alt='' src='assets/touch.svg' className={this.state.hiddenTap ? 'tap hidden' : 'tap'}></img>
-
         <Popup
           className={this.state.hiddenContact ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
           content=
           {<form method='post'
             onSubmit={this.submitHandler.bind(this)}>
-            <span>SAY HELLO</span>Based in Södermalm, Stockholm, Sweden. Please use this form to contact me, or send an email to erikcalmfors@outlook.com<br /><br />
+            <span>SAY HELLO</span>Based in Södermalm, Stockholm, Sweden. Please use the form to contact me, or send an email to <a href='mailto:erikcalmfors@outlook.com'>
+              erikcalmfors@outlook.com</a><br /><br />
             <label htmlFor='realname'>Name</label>
             <input type='text' name='realname' value={this.state.realname} onChange={this.handleChange.bind(this)} required /><br />
             <label htmlFor='email'>Email</label>

@@ -114,6 +114,7 @@ h1 {
   margin-top: calc(-15px - 1vw); 
   margin-left: calc(150px + 10vw);
   transform: rotate(-12deg);
+  opacity: 0.8;
 }
 .dl-pdf{
   width: calc(37px + 2.5vw);
@@ -124,7 +125,7 @@ h1 {
   left:calc(300px + 20vw);
   top:calc(22px + 1.5vw);
   text-align: center;
-  opacity: 50%;
+  opacity: 0.5;
   transition-duration: 0.25s;
 }
 .dl-pdf img{
@@ -285,7 +286,7 @@ input[type=submit]:hover{
   .content{
     margin-top: 9vw;
     top: -20vw;
-    font-size: 3.4vw;
+    font-size: 3.6vw;
     line-height: 4.2vw;
     height: 13vw;
   }
@@ -361,7 +362,7 @@ input[type=submit]:hover{
   }
   .popup-content{
     line-height: 6vw;
-    font-size: 3.5vw;
+    font-size: 3.6vw;
     overflow: auto;
     height: calc(100% - 7vw);
     overflow: auto;
