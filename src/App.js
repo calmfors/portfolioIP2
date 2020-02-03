@@ -246,7 +246,7 @@ class App extends Component {
           title1='CONTACT'
           title2='CV'
           title3='PORTFOLIO'
-          title4={<a target='_blank' rel='noopener noreferrer' title='Link to my github'
+          title4={<a target='_blank' rel='noopener noreferrer' title='My GitHub page'
             href='https://github.com/calmfors'>GITHUB <img src='assets/external-link-symbol.svg' alt='' /></a>}
         />
         <img alt='' src='assets/erik.png' className='erik'></img>
@@ -255,7 +255,7 @@ class App extends Component {
           className={this.state.hiddenContact ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
           content=
-          {<form method='post'
+          {[<form key='1' method='post'
             onSubmit={this.submitHandler.bind(this)}>
             <span>SAY HELLO</span>Based in Södermalm, Stockholm, Sweden. Please use the form to contact me, or send an email to <a href='mailto:erikcalmfors@outlook.com'>
               erikcalmfors@outlook.com</a><br /><br />
@@ -266,7 +266,10 @@ class App extends Component {
             <label htmlFor='Message'>Message</label>
             <textarea name='Message' rows='3' cols='60' value={this.state.Message} onChange={this.handleChange.bind(this)} required />
             <input className='button' type='submit' name='submit' value={this.state.submit} />
-          </form>}
+          </form>,
+          <a key='2' href='https://www.linkedin.com/in/erik-calmfors-343802b3/' title='My LinkedIn profile'><img alt='Linkedin logo' id='linkedin' src='assets/linkedin.svg' /></a>,
+          <a key='3' href='https://github.com/calmfors' title='My GitHub page'><img alt='Github logo' id='git' src='assets/github.svg' /></a>
+          ]}
         />
 
         <Popup

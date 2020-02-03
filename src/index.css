@@ -21,7 +21,7 @@ h1 {
   font-size: calc(90px + 6vw);
   color: rgb(215, 155, 215);
   margin: 0;
-  margin-top: calc(-23px - 1vw);
+  margin-top: calc(-23px - 1.5vw);
   margin-bottom: calc(-21px - 1.4vw);
   padding: 0;
   text-align: left;
@@ -261,6 +261,20 @@ input[type=submit]:hover{
   color: white;
 }
 
+#linkedin{
+  position: absolute;
+ left:calc(302px + 20.1vw);
+  top:calc(73px + 4.9vw);
+  width: calc(27px + 1.8vw)
+}
+  #git{
+  position: absolute;
+ left:calc(300px + 20vw);
+  top:calc(105px + 7vw);
+  width: calc(30px + 2vw)
+}
+
+
 @media only screen and (max-width: 768px) {
   h1{
     font-size: 26vw;
@@ -393,6 +407,16 @@ input[type=submit]:hover{
     border-radius: 8vw;
     opacity: 0.85;
     transform: translate(0);
+  }
+  #linkedin{
+    left: 76vw;
+    top:  36vw;
+    width: 11vw;
+}
+  #git{
+    left: 75.5vw;
+    top: 50vw;
+    width: 12vw;
   }
 }
 @supports (-ms-ime-align:auto) {
