@@ -411,12 +411,12 @@ input[type=submit]:hover{
   #linkedin{
     left: 76vw;
     top:  36vw;
-    width: 11vw;
+    width: 9vw;
 }
   #git{
     left: 75.5vw;
-    top: 50vw;
-    width: 12vw;
+    top: 48vw;
+    width: 10vw;
   }
 }
 @supports (-ms-ime-align:auto) {

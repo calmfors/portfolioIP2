@@ -162,7 +162,7 @@ class App extends Component {
       hiddenPortfolio: true,
       isClicked: false,
       hiddenTap: true,
-      runningDistance: 140,
+      runningDistance: 276,
       realname: '',
       email: '',
       Message: '',
@@ -172,6 +172,7 @@ class App extends Component {
 
   clickHandler = (e) => {
     let event = (e === 99) ? e : e.target.value;
+    this.setState({ isTitleRotated: 0, isContentRotated: 0 });
     switch (event) {
       case '1':
         this.setState({ hiddenCV: true, hiddenContact: !this.state.hiddenContact, hiddenPortfolio: true })
@@ -267,8 +268,10 @@ class App extends Component {
             <textarea name='Message' rows='3' cols='60' value={this.state.Message} onChange={this.handleChange.bind(this)} required />
             <input className='button' type='submit' name='submit' value={this.state.submit} />
           </form>,
-          <a key='2' href='https://www.linkedin.com/in/erik-calmfors-343802b3/' title='My LinkedIn profile'><img alt='Linkedin logo' id='linkedin' src='assets/linkedin.svg' /></a>,
-          <a key='3' href='https://github.com/calmfors' title='My GitHub page'><img alt='Github logo' id='git' src='assets/github.svg' /></a>
+          <a key='2' target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/erik-calmfors-343802b3/' title='My LinkedIn profile'>
+            <img alt='Linkedin logo' id='linkedin' src='assets/linkedin.svg' /></a>,
+          <a key='3' target='_blank' rel='noopener noreferrer' href='https://github.com/calmfors' title='My GitHub page'>
+            <img alt='Github logo' id='git' src='assets/github.svg' /></a>
           ]}
         />
 
@@ -276,7 +279,7 @@ class App extends Component {
           className={this.state.hiddenCV ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
           content={[<div key={3} className='dl-pdf'><a key={4} href='assets/cv_ec.pdf' download><img key={5} src='assets/dl_pdf.svg' alt='' /></a></div>, cvcontent, '\n', educontent, '\n',
-          <a key={6} href='assets/cv_ec.pdf'> Click here (or on the icon) to download more detailed pdf-version.</a>, '\n', '\n']}
+          <a key={6} href='assets/cv_ec.pdf'> Click here (or on the icon) to download more detailed pdf-version (in Swedish).</a>, '\n', '\n']}
         />
 
         <Popup
@@ -293,10 +296,6 @@ class App extends Component {
       </div >
     );
   };
-
-  // handleCV = (e) => {
-  //   console.log(e.target.dataset.value)
-  // }
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value })
