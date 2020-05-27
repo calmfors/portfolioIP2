@@ -211,6 +211,10 @@ class App extends Component {
     };
   };
 
+  hoverHandler = () => {
+    this.setState({ isTitleRotated: 0, isContentRotated: 0 });
+  }
+
   render() {
     const { isTitleRotated, isContentRotated } = this.state;
     if (!this.state.isClicked && !timing) this.checkClick()
@@ -227,7 +231,7 @@ class App extends Component {
     return (
       <div className='title-page' >
         <FadeIn transitionDuration={800}>
-          <h1>Erik Calmfors</h1>
+          <h1 onMouseOver={this.hoverHandler}>Erik Calmfors</h1>
           {content.map((item, i) =>
             < Heading
               data={i}
@@ -243,6 +247,7 @@ class App extends Component {
         </FadeIn>
 
         <Buttonbox
+          hover={this.hoverHandler.bind(this)}
           clicked={this.clickHandler.bind(this)}
           title1='CONTACT'
           title2='CV'
@@ -250,7 +255,7 @@ class App extends Component {
           title4={<a target='_blank' rel='noopener noreferrer' title='My GitHub page'
             href='https://github.com/calmfors'>GITHUB <img src='assets/external-link-symbol.svg' alt='' /></a>}
         />
-        <img alt='' src='assets/erik.png' className='erik'></img>
+        <img alt='' onMouseOver={this.hoverHandler} src='assets/erik.png' className='erik'></img>
         <img alt='' src='assets/touch.svg' className={this.state.hiddenTap ? 'tap hidden' : 'tap'}></img>
         <Popup
           className={this.state.hiddenContact ? 'hidden' : 'popup'}
