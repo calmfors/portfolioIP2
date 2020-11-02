@@ -290,13 +290,38 @@ class App extends Component {
         <Popup
           className={this.state.hiddenPortfolio ? 'hidden' : 'popup'}
           clicked={() => this.clickHandler(99)}
-          content={[<a target='_blank' rel='noopener noreferrer' href='http://calmfors.se/quire/' key={1}>
-            <span key={2}>QUIRE <img src='assets/external-link-symbol.svg' alt='' /></span>
-            Note taking app based on Tiny MCE, Team Project 1 KYH Front-end developer. November 2019.</a>, '\n', '\n',
-          <a target='_blank' rel='noopener noreferrer' href='http://calmfors.se/erikruns/' key={3}>
-            <span key={4}>ERIK RUNS <img src='assets/external-link-symbol.svg' alt='' /></span>
-            Review site for running shoes, Individual Project 1 KYH Front-end developer. October 2019. </a>, '\n',
-          <img key={5} src='assets/wip.svg' className='wip' alt='' />]}
+          content={[
+            <a target='_blank' rel='noopener noreferrer' href='http://calmfors.se/soup/' key={1}>
+              <div className="portfolio">
+
+                <img src="assets/soup.png" alt="" style={{ "width": "30%", "marginRight": "10px", "border": "1px solid black" }} />
+                <div>
+                  <span key={2}>SOUP <img src='assets/external-link-symbol.svg' alt='' /></span>
+            Food delivery app made with react, styled components and firebase. Individual Project KYH Front-end developer. October 2020.</div>
+              </div></a>,
+            <a target='_blank' rel='noopener noreferrer' href='http://calmfors.se/quire/' key={3}>
+              <div className="portfolio">
+
+                <img src="assets/quire.png" alt="" style={{ "width": "30%", "marginRight": "10px", "border": "1px solid black" }} />
+                <div>
+                  <span key={4}>QUIRE <img src='assets/external-link-symbol.svg' alt='' /></span>
+            Note taking app based on Tiny MCE, Team Project KYH Front-end developer. November 2019.
+            </div></div></a>,
+            <a target='_blank' rel='noopener noreferrer' href='http://calmfors.se/erikruns/' key={5}>
+
+              <div className="portfolio">
+                <img src="assets/erikruns.png" alt="" style={{ "width": "30%", "marginRight": "10px", "border": "1px solid black" }} />
+                <div>
+
+                  <span key={6}>ERIK RUNS <img src='assets/external-link-symbol.svg' alt='' /></span>
+            Review site for running shoes, Individual Project KYH Front-end developer. October 2019.
+            </div>
+              </div>
+
+            </a>,
+
+            <img key={7} src='assets/wip.svg' className='wip' alt='' />
+          ]}
         />
       </div >
     );
